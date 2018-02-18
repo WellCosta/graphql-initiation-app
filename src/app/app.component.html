@@ -1,0 +1,17 @@
+<div>
+  <mat-toolbar color="primary">
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>GraphQL initiation</span><mat-icon>book</mat-icon>
+  </mat-toolbar>
+
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item routerLink="/"><span><mat-icon>home</mat-icon></span></button>
+    <button mat-menu-item routerLink="/topics">GraphQL topics</button>
+  </mat-menu>
+
+  <mat-card>
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
